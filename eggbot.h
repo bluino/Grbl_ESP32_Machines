@@ -23,6 +23,12 @@
 
 #define Z_SERVO_PIN     GPIO_NUM_27
 
+#define DEFAULT_X_HOMING_MPOS   0.0 
+#define DEFAULT_Y_HOMING_MPOS   0.0
+#define DEFAULT_Z_HOMING_MPOS   DEFAULT_Z_MAX_TRAVEL
+
+#define DEFAULT_HOMING_DIR_MASK     bit (Z_AXIS) // these home negative
+
 #define DEFAULT_STEP_PULSE_MICROSECONDS 3
 #define DEFAULT_STEPPER_IDLE_LOCK_TIME  255 // stay on
 
@@ -49,7 +55,7 @@
 #define DEFAULT_HOMING_PULLOFF          1.0 // mm
 
 #define DEFAULT_X_STEPS_PER_MM 20.0
-#define DEFAULT_Y_STEPS_PER_MM 20.0
+#define DEFAULT_Y_STEPS_PER_MM 16.0
 #define DEFAULT_Z_STEPS_PER_MM 4.0 // This is percent in servo mode
 
 #define DEFAULT_X_MAX_RATE 8000.0 // mm/min
